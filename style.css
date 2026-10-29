@@ -1,0 +1,320 @@
+
+:root{
+        --size-stories-logo: 2.25rem ;
+        --size-stories-logo-bar: 4rem ;
+}
+*{
+        box-sizing: border-box;
+        border-collapse: collapse;
+}
+.card{
+        
+        
+        min-height: 30rem;
+        
+}
+
+.logo{    
+        max-height: 100%;     
+}
+p{
+        margin-bottom: 0.3rem;
+}
+html {
+    /* Forza la dimensione base del browser a essere responsive */
+    font-size: clamp(16px, 0.8vw + 10px, 18px) !important;
+}
+
+/* Colpisce il nome utente (es. GnumuriddeDiamanti) */
+.card h3 {
+    font-size: clamp(0.8rem, 1.2vw + 0.4rem, 1.2rem) !important;
+}
+
+/* Colpisce i testi, la barra dei "Piace a" e i commenti dentro la card */
+.card h5, 
+.card .card-likedby, 
+.card p {
+    font-size: clamp(0.6rem, 0.8vw + 0.3rem, 1rem) !important;
+}
+
+/* Colpisce il testo dentro i link della navbar custom */
+.lista-custom .nav-link {
+    font-size: clamp(0.8rem, 1vw + 0.4rem, 1.2rem) !important;
+}
+
+/* ------------------------------------------- Stile menu post ----------------------------------------------------*/
+.instagram-gradient-border {
+  /* Gradiente ufficiale stile Instagram */
+  height: 2.25rem;
+  width: 2.25rem;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.background-logo{
+        height: 2rem;
+        width: 2rem;   
+}
+
+.instagram-img-stories{
+        height: 1.8rem;
+        width: 1.8rem;
+}
+/*   !!!!!!!!!!!!!!!!   --------------   LOGHI BARRA DELLE STORIE  -----------------  !!!!!!!!!!!!!!!*/
+/* -------------------------------------------- stories bar---------------------------------------------------- */
+
+.stories-container {
+        
+  display: flex;
+  align-items: center; 
+  overflow-x: auto;   
+        /* Occupa tutta la larghezza disponibile */
+  
+  /* Effetto Instagram: lo scroll si blocca "calibrato" sull'icona */
+  scroll-snap-type: x mandatory; 
+  
+  /* Nasconde la barra di scorrimento brutta su Chrome/Safari/Firefox */
+  -webkit-overflow-scrolling: touch; /* Rende lo scroll fluido su iPhone */
+    scrollbar-width: none;    /* Per Firefox */
+  -ms-overflow-style: none;
+}
+
+.stories-name{
+        min-width: calc(var(--size-stories-logo-bar) + 0.5rem) ;
+        white-space: nowrap ;
+        overflow: hidden ;
+        text-overflow: ellipsis ;
+        scroll-snap-align: start; 
+        padding-left: 0.5rem;
+        }
+
+
+
+.instagram-gradient-border-stories {
+  /* Gradiente ufficiale stile Instagram */
+  
+  height:var(--size-stories-logo-bar);
+  width:var(--size-stories-logo-bar);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.background-logo-stories{
+        height:calc(var(--size-stories-logo-bar) - 0.4rem);
+        width:calc(var(--size-stories-logo-bar) - 0.4rem);   
+}
+
+.instagram-img-stories-bar{
+        height: calc(var(--size-stories-logo-bar) - 0.7rem);
+        width: calc(var(--size-stories-logo-bar) - 0.7rem);
+}
+
+
+
+
+
+
+h3{
+        font-size: 0.7rem;
+}
+.dot{
+        height:1.5rem;
+        width: 1.5rem;
+}
+
+/* -----------------------------------------------Carosello ------------------------------- */
+.carousel-inner .carousel-item {
+        height: 20rem;  
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Taglia l'immagine proporzionalmente senza distorcerla */
+ object-position: center;/* Mantiene il focus sul centro dell'immagine */
+}
+.background-loghetto{
+        height: 2.2rem;
+        width: 2.2rem;   
+}
+/* --------------------------------------------- Liked by bar ------------------------------------ */
+h5, .card-likedby, p{
+        font-size: 0.5rem;
+        
+}
+span{   
+        font-weight: 500;
+}
+.instagram-img-likes-logo{
+        height: 1.3rem;
+        width: 1.3rem;
+}
+
+.background-img-likes-logo{
+        height: 1.5rem;
+        width: 1.5rem;
+}
+
+.comment-logo-container{
+
+        height: 1.8rem;
+        width: 3rem;
+
+}
+
+.comment-logo-first,
+.comment-logo-second{
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+.comment-logo-first{
+        left: 0;
+        z-index: 2;
+}
+
+.comment-logo-second{
+        left: 0.75rem;
+        z-index: 1;
+}
+
+.color-gray{
+        color: gray;
+}
+
+.fs{
+        font-size: 0.4rem;
+}
+
+/* ----------.-------------------------------------input bar comment ---------------------- */
+.emoji{
+
+        height: 1.1rem;
+        width: 1.5rem;   
+}
+
+input{  
+        font-size: 0.6rem;
+        
+        border-style: none;
+}
+
+.btn-outline-info{
+        border-color: #2859eb00;
+}
+
+/* ------------------------------------------------------ Navbar ---------------------------------- */
+
+.navbar-toggler{
+        border-color: rgba(255, 255, 255, 0);
+}
+
+ .navbar-brand   {
+        height: 3rem;
+}
+
+.form-control{
+        border-color: rgba(255, 255, 255, 0) ;
+
+}
+
+
+/* --- LAYOUT MOBILE BASE --- */
+.lista-custom {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Su mobile lasciamo il padding a sinistra in modo che il testo non copra le icone prima delle scritte */
+.lista-custom .nav-link {
+  position: relative;
+  padding-left: 35px !important; 
+  display: flex;
+  align-items: center;
+}
+
+/* Pseudo-elementi per le icone (Sempre attivi in entrambi i layout) */
+.lista-custom .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;   
+  height: 24px;  
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-home .nav-link::before { background-image: url('/media/house.svg'); }
+.item-message .nav-link::before { background-image: url('/media/balloon.png'); }
+.item-explore .nav-link::before { background-image: url('/media/compass.svg'); }
+.item-like .nav-link::before { background-image: url('/media/cuore.png'); }
+.item-account .nav-link::before { 
+  background-image: url('/media/logo-chef.png'); 
+  background-size: cover;
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+}
+
+
+
+
+
+/* --- TRASFORMAZIONE SCHERMI GRANDI (PC / Desktop >= 992px) --- */
+@media (min-width: 992px) {
+    /* Resetta l'allineamento a colonna di mobile e lo mette su una riga sola */
+    .navbar .container {
+        flex-direction: row !important;
+    }
+    
+    
+
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    /* Posiziona la barra desktop al centro perfetto dello schermo */
+    .search-container-custom {
+        width: 100%;
+        max-width: 220px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    /* Rimuove lo spazio del testo a destra del link perché lo span è nascosto */
+    .lista-custom .nav-link {
+        padding-left: 0 !important;
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .stories{
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px){
+
+        .card{
+
+                max-width: 425px ;
+                margin:auto;
+
+        }
+
+        .stories-name{
+        min-width: 6rem;
+      
+        }
+}
+
+@media (width >= 768px) {
+  :root {
+    --size-stories-logo-bar: 5rem;
+  }
+}
